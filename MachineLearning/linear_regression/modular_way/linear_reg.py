@@ -49,7 +49,7 @@ class LinearRegression:
         y = y.reshape(-1,1)
         x = x.reshape(-1,1)
 
-        for epoch in range(self.epochs):
+        for _ in range(self.epochs):
             grad_theta0, grad_theta1 = self._compute_gradients(x,y)
             self._update_parameters(grad_theta0, grad_theta1)
             loss = self.compute_loss(x,y)
